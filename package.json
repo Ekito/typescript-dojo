@@ -1,0 +1,29 @@
+{
+  "name": "typescript-dojo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "compile": "tsc",
+    "pretest": "npm run compile",
+    "test": "export NODE_ENV=test && mocha **/*spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ekito/typescript-dojo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ekito/typescript-dojo/issues"
+  },
+  "homepage": "https://github.com/Ekito/typescript-dojo#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^3.4.35",
+    "@types/mocha": "^2.2.40",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "typescript": "^2.2.1"
+  }
+}
