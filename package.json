@@ -5,8 +5,9 @@
   "main": "index.ts",
   "scripts": {
     "compile": "tsc",
+    "compile:watch": "watch 'npm run compile' src/",
     "pretest": "npm run compile",
-    "test": "export NODE_ENV=test && mocha **/*spec.js"
+    "test": "export NODE_ENV=test && parallelshell 'npm run compile:watch' 'mocha -w **/*spec.js'"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,8 @@
     "@types/mocha": "^2.2.40",
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
-    "typescript": "^2.2.1"
+    "parallelshell": "^2.0.0",
+    "typescript": "^2.2.1",
+    "watch": "^1.0.2"
   }
 }
